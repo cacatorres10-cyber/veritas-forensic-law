@@ -1,0 +1,234 @@
+{
+  "meta": {
+    "title": "Veritas Forensic Law",
+    "tagline": "Forensic legal expertise where evidence meets advocacy",
+    "description": "Veritas Forensic Law is a specialist forensic legal practice delivering forensic accounting, digital evidence analysis, expert testimony and litigation support."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About & Services",
+    "board": "Legal Q&A",
+    "contact": "Contact",
+    "appointments": "Book a Consultation",
+    "portal": "Client Portal",
+    "cta": "Book a Consultation",
+    "language": "Language",
+    "english": "English",
+    "spanish": "Español",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "common": {
+    "name": "Full name",
+    "email": "Email address",
+    "phone": "Phone number",
+    "optional": "optional",
+    "required": "required",
+    "submit": "Submit",
+    "sending": "Sending…",
+    "loading": "Loading…",
+    "backHome": "Back to home",
+    "readMore": "Read more",
+    "previous": "Previous",
+    "next": "Next",
+    "page": "Page {current} of {total}"
+  },
+  "home": {
+    "badge": "Forensic Legal Practice",
+    "heroLineOne": "Where",
+    "heroHighlight": "evidence",
+    "heroLineTwo": "meets advocacy.",
+    "heroSubtitle": "We combine rigorous forensic investigation with courtroom-tested legal strategy — uncovering the facts that decide complex disputes.",
+    "ctaPrimary": "Book a Consultation",
+    "ctaSecondary": "Explore our services",
+    "live": "LIVE",
+    "liveStatus": "Accepting new client consultations",
+    "trustTitle": "Trusted by counsel, courts and corporations",
+    "stats": {
+      "years": "Years of forensic practice",
+      "cases": "Matters investigated",
+      "experts": "Credentialed experts",
+      "rate": "Expert testimony accepted"
+    },
+    "servicesTitle": "Our forensic practice areas",
+    "servicesSubtitle": "Four disciplines, one standard of evidentiary rigor.",
+    "credentialsTitle": "Credentials & accreditations",
+    "credentialsSubtitle": "Our work meets the standards relied upon by courts and regulators.",
+    "credentials": {
+      "bar": "Members of the State & Federal Bar",
+      "cfe": "Certified Fraud Examiners (CFE)",
+      "cpa": "Forensic CPAs & accredited valuators",
+      "iso": "ISO/IEC 27037 digital evidence handling"
+    },
+    "finalCtaTitle": "Have a matter that turns on the facts?",
+    "finalCtaSubtitle": "Schedule a confidential consultation with our forensic legal team.",
+    "finalCtaButton": "Book a Consultation"
+  },
+  "services": {
+    "forensicAccounting": {
+      "title": "Forensic Accounting",
+      "summary": "Tracing funds, quantifying damages and exposing financial irregularities.",
+      "detail": "Our forensic accountants reconstruct financial records, trace asset movement, quantify economic damages and prepare schedules that withstand cross-examination. Engagements include fraud quantification, business valuation disputes and post-acquisition disputes."
+    },
+    "digitalForensics": {
+      "title": "Digital Forensics",
+      "summary": "Defensible recovery and analysis of electronic evidence.",
+      "detail": "We acquire, preserve and analyse electronic evidence following ISO/IEC 27037 chain-of-custody standards. From deleted-file recovery to metadata and communications analysis, our reports are built to be admissible and clearly explained to a non-technical tribunal."
+    },
+    "expertTestimony": {
+      "title": "Expert Testimony",
+      "summary": "Clear, credible expert witnesses for deposition and trial.",
+      "detail": "Our credentialed experts deliver written reports and live testimony that translate complex findings into clear, defensible conclusions. We prepare for Daubert challenges and present with the composure that persuades judges and juries."
+    },
+    "litigationSupport": {
+      "title": "Litigation Support",
+      "summary": "E-discovery, evidence management and trial strategy.",
+      "detail": "We support counsel end-to-end: e-discovery and document review, evidence management, demonstratives, and the analytical strategy that turns a mountain of data into a focused, winning narrative."
+    }
+  },
+  "about": {
+    "badge": "About the firm",
+    "title": "Forensic rigor, in service of the truth",
+    "intro": "Veritas Forensic Law sits at the intersection of law, accounting and digital science. We are retained by litigators, in-house counsel, regulators and corporations when the outcome of a matter depends on what the evidence really shows.",
+    "missionTitle": "Our approach",
+    "missionBody": "Every engagement starts with the evidence. We investigate methodically, document defensibly, and communicate our findings with absolute clarity — because an expert conclusion is only as valuable as a tribunal's confidence in it.",
+    "valuesTitle": "What guides our work",
+    "values": {
+      "independenceTitle": "Independence",
+      "independenceBody": "Our duty is to the evidence and the court, not to a predetermined conclusion.",
+      "rigorTitle": "Rigor",
+      "rigorBody": "Methodical, documented procedures that survive the toughest scrutiny.",
+      "clarityTitle": "Clarity",
+      "clarityBody": "Complex findings explained so any decision-maker can follow them.",
+      "confidentialityTitle": "Confidentiality",
+      "confidentialityBody": "Discreet handling of sensitive matters and privileged material."
+    },
+    "servicesTitle": "Services in detail",
+    "ctaTitle": "Discuss your matter with our team",
+    "ctaButton": "Book a Consultation"
+  },
+  "contact": {
+    "badge": "Contact",
+    "title": "Get in touch",
+    "subtitle": "Tell us about your matter and we'll respond within one business day. All enquiries are treated as confidential.",
+    "infoTitle": "Firm information",
+    "office": "Office",
+    "officeValue": "1200 Justice Avenue, Suite 4500\nMetropolitan Center",
+    "phoneLabel": "Phone",
+    "phoneValue": "+1 (555) 014-2200",
+    "emailLabel": "Email",
+    "emailValue": "intake@veritasforensic.law",
+    "hoursLabel": "Hours",
+    "hoursValue": "Monday – Friday, 9:00 – 18:00",
+    "formTitle": "Send a message",
+    "messageLabel": "How can we help?",
+    "messagePlaceholder": "Briefly describe your matter…",
+    "send": "Send message",
+    "successTitle": "Message sent",
+    "successBody": "Thank you. Our intake team will contact you within one business day.",
+    "errorGeneric": "Something went wrong. Please try again."
+  },
+  "appointments": {
+    "badge": "New clients",
+    "title": "Book a consultation",
+    "subtitle": "Choose a date and time that suits you. Consultations are confidential and run approximately 45 minutes.",
+    "dateLabel": "Preferred date",
+    "timeLabel": "Preferred time",
+    "selectTime": "Select a time slot",
+    "reasonLabel": "Reason for consultation",
+    "reasonPlaceholder": "Briefly describe the matter you'd like to discuss…",
+    "submit": "Confirm booking",
+    "successTitle": "Consultation booked",
+    "successBody": "We've reserved {date} at {time} for you, {name}. A confirmation has been sent to {email}.",
+    "bookAnother": "Book another consultation",
+    "errors": {
+      "nameRequired": "Please enter your full name.",
+      "emailInvalid": "Please enter a valid email address.",
+      "phoneRequired": "Please enter a phone number.",
+      "dateRequired": "Please choose a date.",
+      "timeRequired": "Please choose a time slot.",
+      "datePast": "Please choose a date in the future.",
+      "reasonRequired": "Please tell us the reason for your consultation.",
+      "slotTaken": "Sorry, that time slot has just been booked. Please choose another.",
+      "generic": "We couldn't complete your booking. Please try again."
+    }
+  },
+  "board": {
+    "badge": "Public legal Q&A",
+    "title": "Legal questions & answers",
+    "subtitle": "Ask a general legal question or browse what others have asked. Posts are public. This board is for general information only and is not legal advice.",
+    "askTitle": "Ask a question",
+    "nameLabel": "Your name",
+    "namePlaceholder": "Leave blank to post anonymously",
+    "questionLabel": "Your question",
+    "questionPlaceholder": "Type your legal question here…",
+    "submit": "Post question",
+    "submitting": "Posting…",
+    "successBody": "Your question has been posted.",
+    "emptyTitle": "No questions yet",
+    "emptyBody": "Be the first to ask a question.",
+    "answeredBy": "Answered by Veritas Forensic Law",
+    "awaitingAnswer": "Awaiting answer",
+    "anonymous": "Anonymous",
+    "askedOn": "Asked {date}",
+    "errors": {
+      "questionRequired": "Please enter your question.",
+      "generic": "We couldn't post your question. Please try again."
+    }
+  },
+  "portal": {
+    "badge": "Existing clients",
+    "loginTitle": "Client portal",
+    "loginSubtitle": "Sign in to view your case files and message our team.",
+    "emailLabel": "Email address",
+    "passwordLabel": "Password",
+    "signIn": "Sign in",
+    "signingIn": "Signing in…",
+    "signOut": "Sign out",
+    "demoHint": "Demo login — email: client@example.com · password: password123",
+    "invalidCredentials": "Incorrect email or password.",
+    "welcome": "Welcome back, {name}",
+    "dashboardSubtitle": "Your matters and secure messaging in one place.",
+    "casesTitle": "My Case Files",
+    "casesSubtitle": "Current status of your active and recent matters.",
+    "caseNumber": "Case",
+    "lastUpdated": "Updated {date}",
+    "viewCase": "View details",
+    "noCases": "You have no case files on record yet.",
+    "status": {
+      "OPEN": "Open",
+      "IN_REVIEW": "In review",
+      "DISCOVERY": "Discovery",
+      "AWAITING_COURT": "Awaiting court",
+      "CLOSED": "Closed"
+    },
+    "chat": {
+      "title": "Assistant",
+      "subtitle": "Ask about your case or our services",
+      "placeholder": "Type a message…",
+      "send": "Send",
+      "greeting": "Hello! I'm the Veritas assistant. How can I help you today?",
+      "placeholderReply": "Chatbot coming soon.",
+      "comingSoonBadge": "Preview"
+    }
+  },
+  "whatsapp": {
+    "label": "Chat with us on WhatsApp",
+    "tooltip": "Chat with us",
+    "message": "Hello, I'd like to know more about your forensic legal services."
+  },
+  "footer": {
+    "tagline": "Forensic legal expertise where evidence meets advocacy.",
+    "exploreTitle": "Explore",
+    "servicesTitle": "Services",
+    "clientsTitle": "Clients",
+    "digestTitle": "Join our digest",
+    "digestSubtitle": "Occasional insights on forensic law. No spam.",
+    "digestPlaceholder": "Your email",
+    "digestSubmit": "Subscribe",
+    "rights": "All rights reserved.",
+    "disclaimer": "The information on this site is for general purposes and does not constitute legal advice.",
+    "privacy": "Privacy",
+    "terms": "Terms"
+  }
+}

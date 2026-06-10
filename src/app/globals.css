@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Prevent decorative blurred glows (wider than small viewports) from
+     causing horizontal overflow / cropping on mobile. */
+  html,
+  body {
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+
+  body {
+    @apply bg-base text-white/90 antialiased;
+    font-feature-settings: 'ss01', 'cv01';
+  }
+
+  /* Accessible focus ring for keyboard users on every interactive element. */
+  :focus-visible {
+    outline: 2px solid theme('colors.gold.hover');
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  ::selection {
+    background: rgba(167, 139, 113, 0.35);
+    color: #fff;
+  }
+}
+
+@layer components {
+  /* Radial dot-grid background overlay (32px spacing, white @ 8%). */
+  .bg-dots {
+    background-image: radial-gradient(
+      rgba(255, 255, 255, 0.08) 1px,
+      transparent 1px
+    );
+    background-size: 32px 32px;
+  }
+
+  /* Glassmorphism card used across the site. */
+  .glass {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .glass-hover {
+    transition: border-color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+      box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+      transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .glass-hover:hover {
+    border-color: rgba(167, 139, 113, 0.4);
+    box-shadow: 0 0 60px rgba(167, 139, 113, 0.18);
+  }
+
+  /* Gold gradient text for highlighted words. */
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #e8d5b7 0%, #a78b71 60%, #8a7058 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  /* Small uppercase label with premium letter-spacing. */
+  .eyebrow {
+    @apply text-[11px] uppercase tracking-[0.25em] text-gold/80 font-medium;
+  }
+
+  /* Pill button — solid white (primary). */
+  .btn-solid {
+    @apply inline-flex items-center justify-center rounded-full bg-white px-6 py-3
+      text-sm font-medium text-black transition-colors duration-300
+      hover:bg-gold-hover;
+  }
+
+  /* Pill button — bordered (secondary). */
+  .btn-outline {
+    @apply inline-flex items-center justify-center rounded-full border border-white/20
+      px-6 py-3 text-sm font-medium text-white/90 transition-colors duration-300
+      hover:border-gold hover:text-gold-light;
+  }
+
+  /* Gold pill button (used inside dark glass surfaces). */
+  .btn-gold {
+    @apply inline-flex items-center justify-center rounded-full bg-gold px-6 py-3
+      text-sm font-medium text-black transition-colors duration-300
+      hover:bg-gold-hover;
+  }
+
+  /* Form field base styles — accessible, with clear focus state. */
+  .field {
+    @apply w-full rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3
+      text-sm text-white placeholder:text-white/30
+      transition-colors duration-300
+      focus:border-gold/50 focus:bg-white/[0.05] focus:outline-none;
+  }
+
+  .field-label {
+    @apply mb-2 block text-sm font-medium text-white/70;
+  }
+
+  .field-error {
+    @apply mt-1.5 text-xs text-red-400;
+  }
+}
+
+/* Entrance reveal — mimics 'power4.out'. */
+@keyframes pulse-branch {
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.node-line {
+  stroke-width: 2.5;
+  animation: pulse-branch 4s ease-in-out infinite;
+}
+
+.node-line-flow {
+  stroke-dasharray: 5 15;
+  animation: pulse-branch 4s ease-in-out infinite;
+}

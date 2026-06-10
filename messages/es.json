@@ -1,0 +1,234 @@
+{
+  "meta": {
+    "title": "Veritas Forensic Law",
+    "tagline": "Pericia jurídica forense donde la evidencia se une a la defensa",
+    "description": "Veritas Forensic Law es una práctica jurídica forense especializada en contabilidad forense, análisis de evidencia digital, testimonio pericial y apoyo al litigio."
+  },
+  "nav": {
+    "home": "Inicio",
+    "about": "Nosotros y servicios",
+    "board": "Preguntas legales",
+    "contact": "Contacto",
+    "appointments": "Reservar consulta",
+    "portal": "Portal de clientes",
+    "cta": "Reservar consulta",
+    "language": "Idioma",
+    "english": "English",
+    "spanish": "Español",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú"
+  },
+  "common": {
+    "name": "Nombre completo",
+    "email": "Correo electrónico",
+    "phone": "Número de teléfono",
+    "optional": "opcional",
+    "required": "obligatorio",
+    "submit": "Enviar",
+    "sending": "Enviando…",
+    "loading": "Cargando…",
+    "backHome": "Volver al inicio",
+    "readMore": "Leer más",
+    "previous": "Anterior",
+    "next": "Siguiente",
+    "page": "Página {current} de {total}"
+  },
+  "home": {
+    "badge": "Práctica jurídica forense",
+    "heroLineOne": "Donde la",
+    "heroHighlight": "evidencia",
+    "heroLineTwo": "se une a la defensa.",
+    "heroSubtitle": "Combinamos una investigación forense rigurosa con una estrategia jurídica probada en los tribunales, revelando los hechos que deciden las disputas más complejas.",
+    "ctaPrimary": "Reservar consulta",
+    "ctaSecondary": "Conocer nuestros servicios",
+    "live": "EN VIVO",
+    "liveStatus": "Aceptando consultas de nuevos clientes",
+    "trustTitle": "La confianza de abogados, tribunales y corporaciones",
+    "stats": {
+      "years": "Años de práctica forense",
+      "cases": "Asuntos investigados",
+      "experts": "Peritos acreditados",
+      "rate": "Testimonio pericial admitido"
+    },
+    "servicesTitle": "Nuestras áreas de práctica forense",
+    "servicesSubtitle": "Cuatro disciplinas, un mismo estándar de rigor probatorio.",
+    "credentialsTitle": "Credenciales y acreditaciones",
+    "credentialsSubtitle": "Nuestro trabajo cumple los estándares en que confían tribunales y reguladores.",
+    "credentials": {
+      "bar": "Miembros del Colegio de Abogados estatal y federal",
+      "cfe": "Examinadores de Fraude Certificados (CFE)",
+      "cpa": "Contadores forenses (CPA) y tasadores acreditados",
+      "iso": "Manejo de evidencia digital ISO/IEC 27037"
+    },
+    "finalCtaTitle": "¿Tiene un asunto que depende de los hechos?",
+    "finalCtaSubtitle": "Agende una consulta confidencial con nuestro equipo jurídico forense.",
+    "finalCtaButton": "Reservar consulta"
+  },
+  "services": {
+    "forensicAccounting": {
+      "title": "Contabilidad forense",
+      "summary": "Rastreo de fondos, cuantificación de daños y detección de irregularidades financieras.",
+      "detail": "Nuestros contadores forenses reconstruyen registros financieros, rastrean el movimiento de activos, cuantifican daños económicos y preparan cálculos que resisten el contrainterrogatorio. Los encargos incluyen cuantificación de fraude, disputas de valoración de empresas y disputas posteriores a adquisiciones."
+    },
+    "digitalForensics": {
+      "title": "Informática forense",
+      "summary": "Recuperación y análisis defendible de evidencia electrónica.",
+      "detail": "Adquirimos, preservamos y analizamos evidencia electrónica siguiendo los estándares de cadena de custodia ISO/IEC 27037. Desde la recuperación de archivos eliminados hasta el análisis de metadatos y comunicaciones, nuestros informes están diseñados para ser admisibles y explicados con claridad a un tribunal no técnico."
+    },
+    "expertTestimony": {
+      "title": "Testimonio pericial",
+      "summary": "Peritos claros y creíbles para declaraciones y juicio.",
+      "detail": "Nuestros peritos acreditados entregan informes escritos y testimonio en vivo que traducen hallazgos complejos en conclusiones claras y defendibles. Nos preparamos para impugnaciones tipo Daubert y comparecemos con el aplomo que persuade a jueces y jurados."
+    },
+    "litigationSupport": {
+      "title": "Apoyo al litigio",
+      "summary": "E-discovery, gestión de evidencia y estrategia de juicio.",
+      "detail": "Apoyamos a los abogados de principio a fin: e-discovery y revisión de documentos, gestión de evidencia, material demostrativo y la estrategia analítica que convierte una montaña de datos en una narrativa enfocada y ganadora."
+    }
+  },
+  "about": {
+    "badge": "Sobre la firma",
+    "title": "Rigor forense al servicio de la verdad",
+    "intro": "Veritas Forensic Law se sitúa en la intersección del derecho, la contabilidad y la ciencia digital. Nos contratan litigantes, asesores internos, reguladores y corporaciones cuando el resultado de un asunto depende de lo que la evidencia realmente demuestra.",
+    "missionTitle": "Nuestro enfoque",
+    "missionBody": "Cada encargo comienza con la evidencia. Investigamos de forma metódica, documentamos de manera defendible y comunicamos nuestros hallazgos con absoluta claridad, porque una conclusión pericial solo vale tanto como la confianza que el tribunal deposita en ella.",
+    "valuesTitle": "Lo que guía nuestro trabajo",
+    "values": {
+      "independenceTitle": "Independencia",
+      "independenceBody": "Nuestro deber es con la evidencia y el tribunal, no con una conclusión predeterminada.",
+      "rigorTitle": "Rigor",
+      "rigorBody": "Procedimientos metódicos y documentados que resisten el escrutinio más exigente.",
+      "clarityTitle": "Claridad",
+      "clarityBody": "Hallazgos complejos explicados para que cualquier responsable de decidir los entienda.",
+      "confidentialityTitle": "Confidencialidad",
+      "confidentialityBody": "Manejo discreto de asuntos sensibles y material privilegiado."
+    },
+    "servicesTitle": "Servicios en detalle",
+    "ctaTitle": "Converse sobre su asunto con nuestro equipo",
+    "ctaButton": "Reservar consulta"
+  },
+  "contact": {
+    "badge": "Contacto",
+    "title": "Póngase en contacto",
+    "subtitle": "Cuéntenos sobre su asunto y le responderemos en un día hábil. Todas las consultas se tratan de forma confidencial.",
+    "infoTitle": "Información de la firma",
+    "office": "Oficina",
+    "officeValue": "1200 Justice Avenue, Suite 4500\nMetropolitan Center",
+    "phoneLabel": "Teléfono",
+    "phoneValue": "+1 (555) 014-2200",
+    "emailLabel": "Correo",
+    "emailValue": "intake@veritasforensic.law",
+    "hoursLabel": "Horario",
+    "hoursValue": "Lunes a viernes, 9:00 – 18:00",
+    "formTitle": "Enviar un mensaje",
+    "messageLabel": "¿Cómo podemos ayudarle?",
+    "messagePlaceholder": "Describa brevemente su asunto…",
+    "send": "Enviar mensaje",
+    "successTitle": "Mensaje enviado",
+    "successBody": "Gracias. Nuestro equipo de admisión le contactará en un día hábil.",
+    "errorGeneric": "Algo salió mal. Por favor, inténtelo de nuevo."
+  },
+  "appointments": {
+    "badge": "Nuevos clientes",
+    "title": "Reservar una consulta",
+    "subtitle": "Elija una fecha y hora que le convenga. Las consultas son confidenciales y duran aproximadamente 45 minutos.",
+    "dateLabel": "Fecha preferida",
+    "timeLabel": "Hora preferida",
+    "selectTime": "Seleccione un horario",
+    "reasonLabel": "Motivo de la consulta",
+    "reasonPlaceholder": "Describa brevemente el asunto que desea tratar…",
+    "submit": "Confirmar reserva",
+    "successTitle": "Consulta reservada",
+    "successBody": "Hemos reservado el {date} a las {time} para usted, {name}. Se ha enviado una confirmación a {email}.",
+    "bookAnother": "Reservar otra consulta",
+    "errors": {
+      "nameRequired": "Por favor, ingrese su nombre completo.",
+      "emailInvalid": "Por favor, ingrese un correo electrónico válido.",
+      "phoneRequired": "Por favor, ingrese un número de teléfono.",
+      "dateRequired": "Por favor, elija una fecha.",
+      "timeRequired": "Por favor, elija un horario.",
+      "datePast": "Por favor, elija una fecha futura.",
+      "reasonRequired": "Por favor, indíquenos el motivo de su consulta.",
+      "slotTaken": "Lo sentimos, ese horario acaba de ser reservado. Por favor, elija otro.",
+      "generic": "No pudimos completar su reserva. Por favor, inténtelo de nuevo."
+    }
+  },
+  "board": {
+    "badge": "Preguntas legales públicas",
+    "title": "Preguntas y respuestas legales",
+    "subtitle": "Haga una pregunta legal general o lea lo que otros han preguntado. Las publicaciones son públicas. Este foro es solo para información general y no constituye asesoría legal.",
+    "askTitle": "Hacer una pregunta",
+    "nameLabel": "Su nombre",
+    "namePlaceholder": "Déjelo en blanco para publicar de forma anónima",
+    "questionLabel": "Su pregunta",
+    "questionPlaceholder": "Escriba aquí su pregunta legal…",
+    "submit": "Publicar pregunta",
+    "submitting": "Publicando…",
+    "successBody": "Su pregunta ha sido publicada.",
+    "emptyTitle": "Aún no hay preguntas",
+    "emptyBody": "Sea el primero en hacer una pregunta.",
+    "answeredBy": "Respondido por Veritas Forensic Law",
+    "awaitingAnswer": "En espera de respuesta",
+    "anonymous": "Anónimo",
+    "askedOn": "Preguntado el {date}",
+    "errors": {
+      "questionRequired": "Por favor, ingrese su pregunta.",
+      "generic": "No pudimos publicar su pregunta. Por favor, inténtelo de nuevo."
+    }
+  },
+  "portal": {
+    "badge": "Clientes existentes",
+    "loginTitle": "Portal de clientes",
+    "loginSubtitle": "Inicie sesión para ver sus expedientes y comunicarse con nuestro equipo.",
+    "emailLabel": "Correo electrónico",
+    "passwordLabel": "Contraseña",
+    "signIn": "Iniciar sesión",
+    "signingIn": "Iniciando sesión…",
+    "signOut": "Cerrar sesión",
+    "demoHint": "Acceso de demostración — correo: client@example.com · contraseña: password123",
+    "invalidCredentials": "Correo o contraseña incorrectos.",
+    "welcome": "Bienvenido de nuevo, {name}",
+    "dashboardSubtitle": "Sus asuntos y mensajería segura en un solo lugar.",
+    "casesTitle": "Mis expedientes",
+    "casesSubtitle": "Estado actual de sus asuntos activos y recientes.",
+    "caseNumber": "Expediente",
+    "lastUpdated": "Actualizado {date}",
+    "viewCase": "Ver detalles",
+    "noCases": "Aún no tiene expedientes registrados.",
+    "status": {
+      "OPEN": "Abierto",
+      "IN_REVIEW": "En revisión",
+      "DISCOVERY": "Etapa probatoria",
+      "AWAITING_COURT": "En espera del tribunal",
+      "CLOSED": "Cerrado"
+    },
+    "chat": {
+      "title": "Asistente",
+      "subtitle": "Pregunte sobre su caso o nuestros servicios",
+      "placeholder": "Escriba un mensaje…",
+      "send": "Enviar",
+      "greeting": "¡Hola! Soy el asistente de Veritas. ¿En qué puedo ayudarle hoy?",
+      "placeholderReply": "Chatbot próximamente.",
+      "comingSoonBadge": "Vista previa"
+    }
+  },
+  "whatsapp": {
+    "label": "Chatea con nosotros por WhatsApp",
+    "tooltip": "Chatea con nosotros",
+    "message": "Hola, me gustaría saber más sobre sus servicios jurídicos forenses."
+  },
+  "footer": {
+    "tagline": "Pericia jurídica forense donde la evidencia se une a la defensa.",
+    "exploreTitle": "Explorar",
+    "servicesTitle": "Servicios",
+    "clientsTitle": "Clientes",
+    "digestTitle": "Suscríbase a nuestro boletín",
+    "digestSubtitle": "Reflexiones ocasionales sobre derecho forense. Sin spam.",
+    "digestPlaceholder": "Su correo",
+    "digestSubmit": "Suscribirse",
+    "rights": "Todos los derechos reservados.",
+    "disclaimer": "La información de este sitio tiene fines generales y no constituye asesoría legal.",
+    "privacy": "Privacidad",
+    "terms": "Términos"
+  }
+}

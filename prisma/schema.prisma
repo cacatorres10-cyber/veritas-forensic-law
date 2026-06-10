@@ -1,0 +1,65 @@
+// Prisma schema — local SQLite, no external services required.
+// Run: npm run prisma:migrate  (creates dev.db) then npm run prisma:seed
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// ---------------------------------------------------------------------------
+// Portal clients (existing clients who log in)
+// ---------------------------------------------------------------------------
+model Client {
+  id        String     @id @default(cuid())
+  email     String     @unique
+  password  String // bcrypt hash — never store plaintext
+  name      String
+  createdAt DateTime   @default(now())
+  cases     CaseFile[]
+}
+
+// ---------------------------------------------------------------------------
+// Case files shown in the portal ("My Case Files")
+// ---------------------------------------------------------------------------
+model CaseFile {
+  id         String   @id @default(cuid())
+  caseNumber String   @unique
+  title      String
+  status     String // e.g. OPEN, IN_REVIEW, DISCOVERY, CLOSED
+  summary    String
+  updatedAt  DateTime @default(now()) @updatedAt
+  client     Client   @relation(fields: [clientId], references: [id])
+  clientId   String
+}
+
+// ---------------------------------------------------------------------------
+// Appointment scheduling (new clients)
+// Double-booking prevented by a unique (date, time) constraint.
+// ---------------------------------------------------------------------------
+model Appointment {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  phone     String
+  reason    String
+  date      String // ISO date "YYYY-MM-DD"
+  time      String // "HH:mm"
+  createdAt DateTime @default(now())
+
+  @@unique([date, time])
+}
+
+// ---------------------------------------------------------------------------
+// Public legal Q&A message board
+// ---------------------------------------------------------------------------
+model BoardPost {
+  id        String   @id @default(cuid())
+  name      String? // optional — visitors may post anonymously
+  question  String
+  answer    String? // optional firm answer
+  createdAt DateTime @default(now())
+}
