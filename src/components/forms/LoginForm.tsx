@@ -3,36 +3,21 @@
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { useRouter } from '@/i18n/navigation';
-import { loginAction } from '@/app/[locale]/portal/actions';
 
+// Demo build: no real auth — "Sign in" goes straight to the portal dashboard.
 export function LoginForm() {
   const t = useTranslations('portal');
   const router = useRouter();
   const [submitting, setSubmitting] = useState(false);
-  const [error, setError] = useState(false);
 
-  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const form = e.currentTarget;
     setSubmitting(true);
-    setError(false);
-    try {
-      const res = await loginAction(new FormData(form));
-      if (res.ok) {
-        router.push('/portal');
-        router.refresh();
-      } else {
-        setError(true);
-        setSubmitting(false);
-      }
-    } catch {
-      setError(true);
-      setSubmitting(false);
-    }
+    router.push('/portal');
   }
 
   return (
-    <form onSubmit={onSubmit} noValidate className="glass rounded-3xl p-8 sm:p-10">
+    <form onSubmit={onSubmit} className="glass rounded-3xl p-8 sm:p-10">
       <div className="space-y-5">
         <div>
           <label htmlFor="email" className="field-label">
@@ -43,7 +28,6 @@ export function LoginForm() {
             name="email"
             type="email"
             autoComplete="email"
-            required
             className="field"
             defaultValue="client@example.com"
           />
@@ -58,17 +42,10 @@ export function LoginForm() {
             name="password"
             type="password"
             autoComplete="current-password"
-            required
             className="field"
             defaultValue="password123"
           />
         </div>
-
-        {error && (
-          <p className="field-error" role="alert">
-            {t('invalidCredentials')}
-          </p>
-        )}
 
         <button
           type="submit"

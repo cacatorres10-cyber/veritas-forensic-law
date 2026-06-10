@@ -1,22 +1,15 @@
-import { redirect } from 'next/navigation';
-import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { getCurrentClient } from '@/lib/auth';
+import { useTranslations } from 'next-intl';
+import { setRequestLocale } from 'next-intl/server';
 import { Container, PageIntro } from '@/components/ui';
 import { LoginForm } from '@/components/forms/LoginForm';
 
-export default async function LoginPage({
-  params,
+export default function LoginPage({
+  params: { locale },
 }: {
   params: { locale: string };
 }) {
-  const { locale } = params;
   setRequestLocale(locale);
-
-  // Already signed in → go straight to the portal.
-  const client = await getCurrentClient();
-  if (client) redirect(`/${locale}/portal`);
-
-  const t = await getTranslations('portal');
+  const t = useTranslations('portal');
 
   return (
     <div className="pt-32 lg:pt-40">

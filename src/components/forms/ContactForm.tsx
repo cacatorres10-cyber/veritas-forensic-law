@@ -2,54 +2,32 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { submitContact } from '@/app/[locale]/contact/actions';
+import { waLink } from '@/lib/config';
 
-type Status = 'idle' | 'sending' | 'success' | 'error';
-
+// Demo build: sending a message opens WhatsApp with the message prefilled.
 export function ContactForm() {
   const t = useTranslations('contact');
   const c = useTranslations('common');
-  const [status, setStatus] = useState<Status>('idle');
-  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [errors, setErrors] = useState<Record<string, boolean>>({});
 
-  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const form = e.currentTarget;
-    setStatus('sending');
-    setErrors({});
-    try {
-      const res = await submitContact(new FormData(form));
-      if (res.ok) {
-        setStatus('success');
-        form.reset();
-      } else {
-        setErrors(res.errors);
-        setStatus('error');
-      }
-    } catch {
-      setStatus('error');
-    }
-  }
+    const data = new FormData(e.currentTarget);
+    const get = (k: string) => String(data.get(k) ?? '').trim();
 
-  if (status === 'success') {
-    return (
-      <div className="glass rounded-3xl p-8 text-center">
-        <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-green-400/15 text-green-400">
-          ✓
-        </div>
-        <h3 className="mt-4 font-serif text-2xl italic text-white">
-          {t('successTitle')}
-        </h3>
-        <p className="mt-2 text-sm text-white/60">{t('successBody')}</p>
-        <button
-          type="button"
-          onClick={() => setStatus('idle')}
-          className="btn-outline mt-6"
-        >
-          {t('send')}
-        </button>
-      </div>
-    );
+    const next: Record<string, boolean> = {};
+    if (!get('name')) next.name = true;
+    if (!/^\S+@\S+\.\S+$/.test(get('email'))) next.email = true;
+    if (!get('message')) next.message = true;
+    setErrors(next);
+    if (Object.keys(next).length > 0) return;
+
+    const text =
+      `Contact enquiry:\n` +
+      `Name: ${get('name')}\n` +
+      `Email: ${get('email')}\n` +
+      `Message: ${get('message')}`;
+    window.open(waLink(text), '_blank', 'noopener');
   }
 
   return (
@@ -64,21 +42,15 @@ export function ContactForm() {
             {c('name')}
           </label>
           <input id="name" name="name" type="text" required className="field" />
-          {errors.name && <p className="field-error">{t('errorGeneric')}</p>}
+          {errors.name && <p className="field-error">{c('required')}</p>}
         </div>
 
         <div>
           <label htmlFor="email" className="field-label">
             {c('email')}
           </label>
-          <input
-            id="email"
-            name="email"
-            type="email"
-            required
-            className="field"
-          />
-          {errors.email && <p className="field-error">{t('errorGeneric')}</p>}
+          <input id="email" name="email" type="email" required className="field" />
+          {errors.email && <p className="field-error">{c('required')}</p>}
         </div>
 
         <div>
@@ -93,19 +65,11 @@ export function ContactForm() {
             placeholder={t('messagePlaceholder')}
             className="field resize-none"
           />
-          {errors.message && <p className="field-error">{t('errorGeneric')}</p>}
+          {errors.message && <p className="field-error">{c('required')}</p>}
         </div>
 
-        {status === 'error' && Object.keys(errors).length === 0 && (
-          <p className="field-error">{t('errorGeneric')}</p>
-        )}
-
-        <button
-          type="submit"
-          disabled={status === 'sending'}
-          className="btn-solid w-full disabled:opacity-60"
-        >
-          {status === 'sending' ? c('sending') : t('send')}
+        <button type="submit" className="btn-solid w-full">
+          {t('send')}
         </button>
       </div>
     </form>

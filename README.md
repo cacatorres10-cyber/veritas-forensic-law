@@ -1,8 +1,11 @@
 # Veritas Forensic Law — Bilingual Website
 
 A professional, bilingual (English / Spanish) website for a **forensic legal firm**.
-Built with the App Router, fully internationalized, with a SQLite database that runs
-locally with **no external services**.
+Built with the App Router and fully internationalized.
+
+**This is a layout/demo build with no backend** — every page is static and there are
+**no environment variables and no database to set up**. Form buttons (booking, contact,
+Q&A) open **WhatsApp** with the message prefilled, so it deploys anywhere out of the box.
 
 Design: a restrained "dark luxe" system — `#0a0a0a` base, gold/bronze accents,
 Playfair Display + Inter typography, subtle glassmorphism — tuned for credibility.
@@ -16,53 +19,32 @@ Playfair Display + Inter typography, subtle glassmorphism — tuned for credibil
 | Framework          | Next.js 14 (App Router) + TypeScript                |
 | Styling            | Tailwind CSS                                         |
 | Internationalization | next-intl (locale-prefixed routes `/en`, `/es`)   |
-| Database / ORM     | PostgreSQL + Prisma (local Postgres or free Neon)    |
-| Auth               | Modular email + password, signed httpOnly cookie    |
-| Validation         | Zod (server-side)                                    |
+| Data               | Static demo content (no database)                   |
 
 ---
 
 ## Quick start
 
 ```bash
-cp .env.example .env        # then put your Postgres DATABASE_URL in .env
-npm install                 # installs deps + generates Prisma client
-npm run db:push             # creates the tables in your database
-npm run prisma:seed         # seeds demo data
-npm run dev                 # http://localhost:3000  (redirects to /en)
+npm install
+npm run dev      # http://localhost:3000  (redirects to /en)
 ```
 
-> No local Postgres? Create a free database at **[neon.tech](https://neon.tech)** and
-> paste its connection string into `DATABASE_URL` — it works for both local and prod.
-> `npm install` runs `prisma generate` automatically (postinstall).
-
-### Reset the database
-
-```bash
-npm run db:reset            # wipes, re-pushes the schema and re-seeds
-```
+No `.env`, no database — it just runs.
 
 ---
 
-## Deploy to Vercel (live link)
+## Deploy (live link)
 
-1. Create a free Postgres database at **[neon.tech](https://neon.tech)** and copy its
-   connection string (use the **direct/unpooled** URL).
-2. Import this repo in **Vercel**.
-3. In Vercel → **Settings → Environment Variables**, add (for all environments):
-   - `DATABASE_URL` → your Neon connection string
-   - `AUTH_SECRET` → any long random string
-4. Deploy. The build (`vercel.json`) runs `prisma db push` + seed automatically, so
-   the schema and demo data are created on first deploy.
+Import the repo in **Vercel** (or Netlify) and deploy — **no environment variables
+needed**. The whole site is static, so the build just works.
 
 ---
 
-## Demo credentials (client portal)
+## WhatsApp number
 
-```
-Email:    client@example.com
-Password: password123
-```
+Forms and the floating button link to WhatsApp. Set the firm's number (international
+format, digits only) in **[`src/lib/config.ts`](src/lib/config.ts)** → `WHATSAPP_NUMBER`.
 
 ---
 
