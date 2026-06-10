@@ -16,7 +16,7 @@ Playfair Display + Inter typography, subtle glassmorphism — tuned for credibil
 | Framework          | Next.js 14 (App Router) + TypeScript                |
 | Styling            | Tailwind CSS                                         |
 | Internationalization | next-intl (locale-prefixed routes `/en`, `/es`)   |
-| Database / ORM     | SQLite + Prisma                                      |
+| Database / ORM     | PostgreSQL + Prisma (local Postgres or free Neon)    |
 | Auth               | Modular email + password, signed httpOnly cookie    |
 | Validation         | Zod (server-side)                                    |
 
@@ -25,21 +25,35 @@ Playfair Display + Inter typography, subtle glassmorphism — tuned for credibil
 ## Quick start
 
 ```bash
-cp .env.example .env        # local SQLite + dev session secret
+cp .env.example .env        # then put your Postgres DATABASE_URL in .env
 npm install                 # installs deps + generates Prisma client
-npx prisma migrate dev      # creates prisma/dev.db and applies the schema
-npm run prisma:seed         # seeds demo data (already run by migrate dev)
+npm run db:push             # creates the tables in your database
+npm run prisma:seed         # seeds demo data
 npm run dev                 # http://localhost:3000  (redirects to /en)
 ```
 
+> No local Postgres? Create a free database at **[neon.tech](https://neon.tech)** and
+> paste its connection string into `DATABASE_URL` — it works for both local and prod.
 > `npm install` runs `prisma generate` automatically (postinstall).
-> The first `npx prisma migrate dev` both creates the database **and** runs the seed.
 
 ### Reset the database
 
 ```bash
-npm run db:reset            # drops, re-migrates and re-seeds dev.db
+npm run db:reset            # wipes, re-pushes the schema and re-seeds
 ```
+
+---
+
+## Deploy to Vercel (live link)
+
+1. Create a free Postgres database at **[neon.tech](https://neon.tech)** and copy its
+   connection string (use the **direct/unpooled** URL).
+2. Import this repo in **Vercel**.
+3. In Vercel → **Settings → Environment Variables**, add (for all environments):
+   - `DATABASE_URL` → your Neon connection string
+   - `AUTH_SECRET` → any long random string
+4. Deploy. The build (`vercel.json`) runs `prisma db push` + seed automatically, so
+   the schema and demo data are created on first deploy.
 
 ---
 

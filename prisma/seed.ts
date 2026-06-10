@@ -4,13 +4,15 @@ import bcrypt from 'bcryptjs';
 const prisma = new PrismaClient();
 
 async function main() {
-  console.log('🌱 Seeding database…');
+  // Idempotent: if the demo data already exists, do nothing. This lets the
+  // seed run safely on every Vercel build without wiping visitor-created data.
+  const existing = await prisma.client.count();
+  if (existing > 0) {
+    console.log('🌱 Database already seeded — skipping.');
+    return;
+  }
 
-  // Clean slate (safe for a local demo db).
-  await prisma.caseFile.deleteMany();
-  await prisma.client.deleteMany();
-  await prisma.boardPost.deleteMany();
-  await prisma.appointment.deleteMany();
+  console.log('🌱 Seeding database…');
 
   // --- Demo portal client -------------------------------------------------
   const password = await bcrypt.hash('password123', 10);

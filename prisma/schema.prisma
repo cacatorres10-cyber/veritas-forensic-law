@@ -1,12 +1,14 @@
-// Prisma schema — local SQLite, no external services required.
-// Run: npm run prisma:migrate  (creates dev.db) then npm run prisma:seed
+// Prisma schema — PostgreSQL (works locally and on Vercel/Neon).
+// Set DATABASE_URL (see .env.example), then: npm run db:push && npm run prisma:seed
 
 generator client {
-  provider = "prisma-client-js"
+  provider      = "prisma-client-js"
+  // "native" for local dev; rhel target is what Vercel's serverless runtime needs.
+  binaryTargets = ["native", "rhel-openssl-3.0.x"]
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
